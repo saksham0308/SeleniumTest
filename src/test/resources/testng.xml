@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="regression suite" parallel="classes" thread-count="10">
+    <groups>
+        <run>
+            <include name="regression"></include>
+<!--            <exclude name="negative"></exclude>-->
+        </run>
+    </groups>
+<!--    <listeners>-->
+<!--        <listener class-name="Listeners"></listener>-->
+<!--        &lt;!&ndash;        <listener class-name="com.im.service.util.listener.HtmlReportListener"></listener>&ndash;&gt;-->
+<!--    </listeners>-->
+    <test verbose="5" preserve-order="true"
+          name="Amazon and Udemy">
+        <classes>
+        <class name="AmazonTest">
+                <methods>
+<!--                    <exclude name="NewFlipkartTest"/>-->
+                </methods>
+            </class>
+<!--            <class name="AmazonTest">-->
+<!--                <methods>-->
+<!--                    <exclude name="Demo10"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+
+    </test>
+    <test verbose="5" preserve-order="true"
+          name="Flipkart">
+
+        <classes>
+            <class name="FlipkartTest">
+<!--                <methods>-->
+<!--                    <exclude name="WebLogin"/>-->
+<!--                    <exclude name="Mobile.*"/>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+
+    </test>
+</suite>
